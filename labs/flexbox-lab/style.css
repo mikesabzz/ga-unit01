@@ -1,0 +1,130 @@
+
+/* FLEXBOX GOES HERE */
+
+body {
+  /* three properties */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  /* two properties */
+  display: flex;
+  flex-direction:  column;
+
+}
+
+.logo {
+  /* four properties */
+  flex: 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main, article {
+  /* three properties */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  /* one property */
+  flex: 2;
+}
+
+.feature {
+  /* two properties */
+  flex: 1;
+  display: flex;
+}
+
+.col {
+  /* one property */
+  flex: 1;
+}
+
+@media screen and (min-width: 1025px) {
+  header {
+    /* two properties */
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    /* one property */
+    display: flex;
+  }
+
+  main {
+    /* one property */
+    flex-direction: row;
+  }
+
+  aside {
+    /* one property */
+    flex: 1;
+  }
+
+  article {
+    /* one property */
+    flex: 3;
+  }
+}
+
+
+/* SETUP (DON'T CHANGE THIS) */
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+header {
+  background-color: aquamarine;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: plum;
+}
+
+nav ul li {
+  border: 1px solid grey;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+article {
+  background-color: lightsalmon;
+  box-sizing: border-box;
+}
+
+section {
+  border: 1px solid grey;
+}
+
+.content {
+  padding: 50px;
+}
+
+.col {
+  padding: 10px;
+  background-color: papayawhip;
+  margin: 5px;
+}
+
+aside {
+  background-color: lightskyblue;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  padding: 50px;
+  box-sizing: border-box;
+}

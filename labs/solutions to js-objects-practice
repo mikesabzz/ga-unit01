@@ -1,0 +1,67 @@
+const snakewaterMontana = {
+  paleontologist: "Dr. Alan Grant",
+  depth: "10 meters",
+  specimen: "Velociraptor"
+}
+
+const guestOfHonor = snakewaterMontana.paleontologist
+const cleverGirl = snakewaterMontana.specimen
+
+const nicaragua = {
+  depth: "200 meters",
+  annual_budget: 1500000,
+  specimens: [
+    "Tyrannosaurus Rex",
+    "Stegosaurous",
+    "Triceratops",
+    "Velociraptor"
+  ]
+}
+
+const nicaraguanSpecimens = nicaragua.specimens
+const favoriteSpecimen = nicaragua.specimens[2]
+
+nicaragua.annual_budget += 250000
+
+const hammondsMines = {
+  buenos_aires: {
+    depth: "400 meters",
+    annual_budget: 1000000,
+    specimens: [
+      "Dilophosaurus",
+      "Brachiosaurus"
+    ]
+  },
+  mexico: {
+    depth: "350 meters",
+    annual_budget: 900000,
+    specimens: [
+      "Gallimimus",
+      "Parasaurolophus"
+    ]
+  }
+}
+
+const mexicoMineDepth = hammondsMines.mexico.depth
+const buenosAiresBudget = hammondsMines.buenos_aires.buenosAiresBudget
+
+hammondsMines.nicaragua = nicaragua
+
+const budget1 = hammondsMines.buenos_aires.annual_budget
+const budget2 = hammondsMines.mexico.annual_budget
+const budget3 = hammondsMines.nicaragua.annual_budget
+
+const totalAnualBudget = budget1 + budget2 + budget3
+
+function getDinosaur(dinosaur, array) {
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === dinosaur) {
+      return array[i]
+    }
+  }
+  return 'Does not exist'
+}
+
+console.log(getDinosaur('Parasaurolophus', hammondsMines.mexico.specimens))
+console.log(getDinosaur('Parasaurolophus', hammondsMines.buenos_aires.specimens))
+console.log(getDinosaur('Parasaurolophus', hammondsMines.nicaragua.specimens))
